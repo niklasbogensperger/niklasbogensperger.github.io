@@ -13,7 +13,7 @@ h4 {
     line-height: 1.45;
 
     a {
-      text-decoration: none;
+        text-decoration: none;
     }
 }
 ///////////////
@@ -60,17 +60,17 @@ input, button, select {
 ///////////////////////////////////////////////
 // add h4 (####) as an available option in markdown content
 $font-scale-large: (
-  h4: 1.45rem,
+    h4: 1.45rem,
 );
 $font-scale-medium: (
-  h4: 1.4rem,
+    h4: 1.4rem,
 );
 $font-scale-small: (
-  h4: 1.3rem,
+    h4: 1.3rem,
 );
 h4 {
     @include size(h4);
-  }
+}
 ///////////////
 // end patch //
 ///////////////
@@ -88,9 +88,9 @@ h4 {
 // decrease the margins around the social icons in the footer (since there are none) to even out the spacing
 footer {
     .social {
-      margin-top: $vertical-rhythm * 0.5;
-      margin-bottom: $vertical-rhythm * 0.5;
-  }
+        margin-top: $vertical-rhythm * 0.5;
+        margin-bottom: $vertical-rhythm * 0.5;
+    }
 }
 ///////////////
 // end patch //
@@ -273,7 +273,7 @@ nav {
     p {
         margin-bottom: 0em;
     }
-  }
+}
 ////////////////
 // end tweaks //
 ////////////////
@@ -285,13 +285,13 @@ nav {
 //////////////////////////////////////////////////////
 article.entry-content {
     ul, ol {
-      margin-top: -1.5rem;
+        margin-top: -1.5rem;
     }
 
     ul, ol {
-      padding-left: 10px;
+        padding-left: 10px;
     }
-  }
+}
 ////////////////
 // end tweaks //
 ////////////////
