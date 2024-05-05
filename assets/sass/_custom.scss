@@ -132,6 +132,7 @@ footer {
 @media (max-width: $mobile-breakpoint) {
     .modal-box {
         width: 95vw;
+        max-height: 95vh;
     }
 
     .modal-content {
