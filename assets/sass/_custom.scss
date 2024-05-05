@@ -128,6 +128,17 @@ footer {
     max-height: 75vh;
 }
 
+// increase both the base width and max height on small screens to actually be able to see the content in the modal popups well
+@media (max-width: $mobile-breakpoint) {
+    .modal-box {
+        width: 95vw;
+    }
+
+    .modal-content {
+        max-height: 90vh;
+    }
+}
+
 // limit width of images in the modal to 49% of modal width (to facilitate displaying two of them next to each other)
 .modal-content {
     img {
