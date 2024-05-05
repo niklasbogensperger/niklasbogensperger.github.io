@@ -75,11 +75,15 @@ $term_title: "{{ .Site.Data.terminal.title }}";
     background-image: url("{{ $imgDict.lqip.Permalink }}"); 
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: scroll;  // default for mobile support
+    // apply parallax only for non-mobile
+    @media (min-width: $mobile-breakpoint) {
+        background-attachment: fixed;
+    }
   }
 
   {{ range $imgDict.responsive }}
