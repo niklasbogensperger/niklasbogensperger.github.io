@@ -29,6 +29,8 @@ h4 {
 .contact {
     small {
         color: inherit;
+        line-height: 0.8;
+        margin-top: 0.4em;
     }
 }
 
@@ -295,3 +297,23 @@ article.entry-content {
 ////////////////
 // end tweaks //
 ////////////////
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+// begin tweaks for specified line break between disclaimer sentences below contact form //
+///////////////////////////////////////////////////////////////////////////////////////////
+.break-point {
+    display: inline-block;
+    margin-right: 0.25em;
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .break-point {
+        display: block;
+    }
+}
+////////////////
+// end tweaks //
+////////////////
+
