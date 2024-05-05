@@ -317,3 +317,35 @@ article.entry-content {
 // end tweaks //
 ////////////////
 
+
+
+//////////////////////////////////////////////////////////////////////////////
+// begin tweaks for animated arrow icon reminding users to scroll on mobile //
+//////////////////////////////////////////////////////////////////////////////
+.scroll-icon {
+    position: absolute;
+    bottom: 1.5vh;
+    left: 50vw;
+    transform: translate(-50%, 0);  // actually center (otherwise icon's left edge is aligned with the center)
+    z-index: 1000;
+    animation: breathing 3s ease-in-out infinite;
+}
+
+@keyframes breathing {
+    0%, 100% {
+        transform: translate(-50%, 20%);
+    }
+    50% {
+        transform: translate(-50%, -20%);
+    }
+}
+
+// hide icon on desktop
+@media (min-width: $mobile-breakpoint) {
+    .scroll-icon {
+        visibility: hidden;
+    }
+}
+////////////////
+// end tweaks //
+////////////////
