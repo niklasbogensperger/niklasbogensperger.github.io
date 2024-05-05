@@ -1,0 +1,123 @@
+title: "Niklas Bogensperger"
+baseURL: "https://bogensperger.me"
+languageCode: "en-US"
+theme: "github.com/kdevo/osprey-delight/v5"
+enableEmoji: true
+disableKinds:
+- "taxonomy"
+- "term"
+
+
+module:
+  imports:
+  - path: github.com/kdevo/osprey-delight/v5
+  - path: github.com/hugo-mods/icons
+
+
+## generic theme parameters
+Params:
+  author:
+    name: "Niklas Bogensperger"
+  description: "Niklas Bogensperger: Homepage"
+
+  # logo at the top of the page
+  # overridden by custom logo-img.html partial to use svg
+  logoBig: ""
+
+  # logo in the left corner of the nav bar
+  # overridden by custom body-top.html partial to use svg
+  logoSmall: ""
+
+  # favicon
+  favicon: "favicon.png"
+
+  # image layer behind logoBig at the top of the page with parallax effect
+  background: "background.png"
+
+  # image that is shown when previewing the site in e.g. a messenger or Google Search
+  opengraphImage: "/static/opengraph.png"
+
+  # choose from delight (osprey-delight light), dedark (osprey-delight dark), or origin (legacy)
+  theme: "dedark_custom"
+
+  # tagline or mdTagline (to use markdown) is shown at the top, below the logo, followed by a cursor
+  # overridden by custom body-top.html partial to use typed.css cursor logic
+
+  # enforces redirection to the baseURL for all sub-directories/-pages
+  # example: if you create about.md, Hugo will also create a '/about/index.html' which might not be desired for a *single* page site
+  # if this switch is enabled, all these "orphan" files will contain only a redirect directive
+  enforceSinglePage: true
+
+  # copyright flag generates a copyright notice in footer of your site
+  # augmented by custom footer.html partial
+  copyright: true
+
+  # credits/acknowledgements
+  # augmented by custom footer.html partial
+  credit: true
+
+
+## additional theme features
+  Feat:
+    # requires Basin setup for a contact form
+    ajaxBasin: "https://usebasin.com/f/547685225020"
+
+    # useStructuredData for your own https://schema.org/Person (SEO-friendly)
+    # this will be auto-generated dependent on the information you provide in this configuration
+    useStructuredData: false
+
+    # enables Termynal (https://github.com/ines/termynal), a small JS library for showing a terminal "animation" from within your gallery item
+    # the library has been stripped-down to a minimum to only have the necessary functionality
+    useTermynal: false
+
+    googleTagManager: ""
+
+    # notifyOnNewThemeVersion enables a notification for every new minor/major version of this theme
+    # whenever there is a new update, a warning is printed to console
+    notifyOnNewThemeVersion: true
+
+  # image resizing can be configured here (see README for more info):
+  Image:
+    Gallery:
+      resize: "600x"
+
+    Background:
+      resize: "2400x"
+      resizeLQIP: "1600x"
+
+  # advanced configuration for lazyimg module (comment out if needed):
+  lazyimg:
+  #   resizer: auto
+  #   renderer: lqip-webp
+
+  #   # Resizer options:
+  #   lqipSize: "120x Gaussian"
+  #   maxSize: "1920x"
+    responsiveSizes: ["1600x", "1920x"]
+    resizeOptions: "Lanczos q100"
+
+  #   # Renderer options:
+  #   #class: ""
+  #   #alt: ""
+  #   noscript: true
+
+
+## menu items automatically added to navbar
+Menu:
+  Main:
+    # - name: displayed name
+    #   identifier: controls the section type (and thereby the appearence)
+    #   url: must be an anchor for smooth scrolling to it when clicking on the menu item
+    #   weight: controls ordering of menu items
+    - name: "Me"
+      identifier: about
+      url: "/#me"
+      weight: 1
+    - name: "Gallery"
+      identifier: gallery
+      url: "/#gallery"
+      weight: 2
+    - name: "Contact"
+      identifier: contact
+      url: "/#contact"
+      weight: 3

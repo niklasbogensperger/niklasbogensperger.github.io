@@ -1,0 +1,285 @@
+///////////////////////////////////////////////////////////////////////////////
+// PATCHES
+///////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////
+// begin patch /assets/sass/main.scss //
+////////////////////////////////////////
+// add h4 (####) and decrease the bottom margin for tighter spacing
+h4 {
+    margin-bottom: $vertical-rhythm - 1.5rem;
+    font-family: $font-header;
+    letter-spacing: 2px;
+    line-height: 1.45;
+
+    a {
+      text-decoration: none;
+    }
+}
+///////////////
+// end patch //
+///////////////
+
+
+
+////////////////////////////////////////////
+// begin patch /assets/sass/_contact.scss //
+////////////////////////////////////////////
+// small text below contact form should be the default color and not the accent color
+.contact {
+    small {
+        color: inherit;
+    }
+}
+
+// add borders with default color around form fields when not active (when active, the accent color is used)
+input, select {
+    border-color: $primary-fg-color;
+}
+
+// remove default color border again (and replace with accent color border) around form fields when active
+input, button, select {
+    &:focus {
+        outline: none; // Remove default focus outline
+        border-color: $accent-color; // Change border to accent color on focus
+    }
+}
+
+// ensure contact form button has no border color in any state
+.form-button {
+    border-color: transparent;
+}
+///////////////
+// end patch //
+///////////////
+
+
+
+///////////////////////////////////////////////
+// begin patch /assets/sass/_fontsizing.scss //
+///////////////////////////////////////////////
+// add h4 (####) as an available option in markdown content
+$font-scale-large: (
+  h4: 1.45rem,
+);
+$font-scale-medium: (
+  h4: 1.4rem,
+);
+$font-scale-small: (
+  h4: 1.3rem,
+);
+h4 {
+    @include size(h4);
+  }
+///////////////
+// end patch //
+///////////////
+
+
+
+///////////////////////////////////////////
+// begin patch /assets/sass/_layout.scss //
+///////////////////////////////////////////
+// widen the base container width (e.g for about/me and contact sections)
+.container {
+    max-width: 62.5rem; // 1000px
+}
+
+// decrease the margins around the social icons in the footer (since there are none) to even out the spacing
+footer {
+    .social {
+      margin-top: $vertical-rhythm * 0.5;
+      margin-bottom: $vertical-rhythm * 0.5;
+  }
+}
+///////////////
+// end patch //
+///////////////
+
+
+
+//////////////////////////////////////////
+// begin patch /assets/sass/_modal.scss //
+//////////////////////////////////////////
+// color the smaller headings with the accent color and make links white with a change to the accent color on hover
+.modal {
+    h3,
+    h4 {
+        color: $accent-color;
+      }
+
+    article {
+        a {
+            color: inherit;
+            &:hover {
+                color: $accent-color
+            }
+        }
+    }
+}
+
+// decrease the base width of the modal box (max limits stay unchanged)
+.modal-box {
+    width: 65vw;
+}
+
+// increase the max height of the modal box
+.modal-content {
+    max-height: 75vh;
+}
+
+// limit width of images in the modal to 49% of modal width (to facilitate displaying two of them next to each other)
+.modal-content {
+    img {
+        max-width: 49%;
+    }
+}
+
+// highlight close icon with accent color on hover
+.close svg {
+    transition: fill 0.2s ease;
+
+    &:hover {
+        fill: $accent-color;
+    }
+}
+#icon-close {
+    fill: inherit;
+}
+///////////////
+// end patch //
+///////////////
+
+
+
+////////////////////////////////////////
+// begin patch /assets/sass/_nav.scss //
+////////////////////////////////////////
+// alignment and dimensions of github logo svg
+nav {
+    svg {
+        display: inline-block;
+        max-width: 5em;
+        vertical-align: middle;
+    }
+}
+
+// fix hamburger icon disappearing when selecting mobile viewport nav (change assigned color from bg to fg)
+.nav-fixed {
+    a.icon-active > .icon {
+        fill: $full-nav-fg-color;
+    }
+}
+///////////////
+// end patch //
+///////////////
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// TWEAKS
+///////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////
+// begin tweaks for tagline heading //
+//////////////////////////////////////
+// custom cursor animation
+@import 'typed';
+.cursorheading {
+    @include typed("homepage.", "C<[2]>V<[2]>.", "playground.", "life.", "projects.", 1.25, (caret-width: 0.15em));
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        display: block;
+        white-space: nowrap;
+    }
+}
+
+// better spacing
+.heading {
+    padding-top: 50px;
+    margin-bottom: -7px;
+}
+////////////////
+// end tweaks //
+////////////////
+
+
+
+////////////////////////////////////////////////////
+// begin tweaks for screen-width adaptive logoBig //
+////////////////////////////////////////////////////
+// see svg image and modified partials
+.header {
+    .large-image {
+        display: block;
+    }
+    .small-image {
+        display: none;
+    }
+    @media (max-width: $mobile-breakpoint) {
+        .large-image {
+            display: none;
+        }
+        .small-image {
+            display: block;
+        }
+    }
+}
+////////////////
+// end tweaks //
+////////////////
+
+
+
+////////////////////////////////////////////////////////////////
+// begin tweaks for custom GitHub icon hover color in nav bar //
+////////////////////////////////////////////////////////////////
+.github-icon-nav svg {
+    fill: $primary-fg-color;
+    transition: fill 0.3s ease;
+
+    &:hover {
+        fill: $github-hover-color;
+    }
+}
+////////////////
+// end tweaks //
+////////////////
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+// begin tweaks for "replacing" unordered list bullet points with custom icons //
+/////////////////////////////////////////////////////////////////////////////////
+// this basically only emulates an unordered list by adding a hanging indent, so line wrapping behaves similarly
+.hanging-indent {
+    text-indent: -2em !important;
+    padding-left: 2em !important;
+
+    p {
+        margin-bottom: 0em;
+    }
+  }
+////////////////
+// end tweaks //
+////////////////
+
+
+
+//////////////////////////////////////////////////////
+// begin tweaks for tighter and better list spacing //
+//////////////////////////////////////////////////////
+article.entry-content {
+    ul, ol {
+      margin-top: -1.5rem;
+    }
+
+    ul, ol {
+      padding-left: 10px;
+    }
+  }
+////////////////
+// end tweaks //
+////////////////

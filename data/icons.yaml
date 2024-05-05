@@ -1,0 +1,73 @@
+# uses fontawesome 5.15.3
+# names in comments are the altered titles in fontawesome 6.4.2
+
+###############
+# added icons #
+###############
+
+# generic
+mapspin:
+  id: fas map-marker-alt  # "location-dot"
+  title: location
+
+arrow-right:
+  id: fas arrow-right
+  title: arrow-right
+
+
+# education
+degree:
+  id: fas user-graduate
+  title: degree
+
+insitute:
+  id: fas landmark
+  title: insitute
+
+thesis:
+  id: fas book
+  title: thesis
+
+date:
+  id: fas calendar-day
+  title: date
+
+
+# work
+jobtitle:
+  id: fas id-badge
+  title: jobtitle
+
+lecture:
+  id: fas chalkboard-teacher  # "chalkboard-user"
+  title: lecture
+
+workplace:
+  id: fas building
+  title: workplace
+
+tasks:
+  id: fas lightbulb
+  title: tasks
+
+
+
+####################
+# overridden icons #
+####################
+
+close:
+  id: fas times  # "xmark"
+  title: close
+
+download:
+  id: fas arrow-alt-circle-down  # "circle-down"
+  title: download
+
+code:
+  id: fas code
+  title: code
+
+github-octocat:
+  id: fab github
+  title: GitHub

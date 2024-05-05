@@ -1,0 +1,42 @@
+<footer>
+  <div class="row center-xs social">
+  {{ range .Site.Params.Social -}}
+    <div class="col-xs-2">
+      <a target="_blank" rel="noopener" href="{{ .url }}">
+        {{ partial "icon" .type }}
+      </a>
+    </div>
+  {{- end }}
+  </div>
+  {{ if (.Site.Params.copyright) -}}
+  <div class="row center-xs">
+    <div class="col-xs">
+      <small>
+      {{ if .Site.Params.copyright }}
+        {{ i18n "copyright" }} &copy; {{ now.Format "2006" }} {{ .Site.Title }}
+      {{ end }}
+      {{ if or (.Site.Params.credit) (eq (isset .Site.Params "credit") false) -}}
+      <div class="col-xs">
+          <small>Made with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo&nbsp;{{ partial "link_footer_small.svg" }}</a></small>
+          &MediumSpace;|&MediumSpace;
+          <small>Theme: <a href="https://github.com/kdevo/osprey-delight" target="_blank" rel="noopener">Osprey Delight&nbsp;{{ partial "link_footer_small.svg" }}</a></small>
+          &MediumSpace;|&MediumSpace;
+          <small>Icons (text and images): <a href="https://fontawesome.com" target="_blank" rel="noopener">Fontawesome (free)&nbsp;{{ partial "link_footer_small.svg" }}</a></small>
+          &MediumSpace;|&MediumSpace;
+          <small>Form backend: <a href="https://usebasin.com" target="_blank" rel="noopener">Basin&nbsp;{{ partial "link_footer_small.svg" }}</a></small>
+          &MediumSpace;|&MediumSpace;
+          <small>Typewriter effect: <a href="https://github.com/brandonmcconnell/typed.css" target="_blank" rel="noopener">Typed.css&nbsp;{{ partial "link_footer_small.svg" }}</a></small>
+      </div>
+      <div class="col-xs">
+          <small><small><small>
+          The GitHub logo is used on this site for illustrative purposes only and does not imply affiliation or endorsement by GitHub, Inc. or Microsoft Corporation. <a href="https://github.com" target="_blank" rel="noopener">GitHub&nbsp;{{ partial "link_footer_extrasmall.svg" }}</a>&MediumSpace;is a trademark of GitHub, Inc.
+          &MediumSpace;|&MediumSpace;
+          The presence of an ({{ partial "link_footer_extrasmall.svg" }}) icon next to a link indicates that it directs to an external site to which I do not contribute content. No affiliation is implied, nor is the content explicitly endorsed.
+          </small></small></small>
+      </div>
+      {{- end }}
+      </small>
+    </div>
+  </div>
+  {{- end }}
+</footer>
