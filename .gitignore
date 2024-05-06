@@ -65,3 +65,6 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/hugo,macos,linux
 
+
+### Hidden extra files
+/hidden/
