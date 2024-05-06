@@ -13,7 +13,7 @@ draft: false
 ---
 
 
-Telegram bot written in Python, which monitors a given website for changes using an efficient from-scratch implementation of a diff-like difference tracker. Upon detecting changes, it sends a message via the Telegram bot [`@websiteBot_bot`&nbsp;{{< svg "static/link_modal.svg" >}}](https://t.me/websiteBot_bot)&MediumSpace;to any people who subscribed to updates about a given website.
+Telegram bot written in Python, which monitors a given website for changes using an efficient from-scratch implementation of a diff-like difference tracker. Upon detecting changes, it sends a message via the Telegram bot [`@websiteBot_bot`&nbsp;{{< svg "static/link_modal_alt.svg" >}}](https://t.me/websiteBot_bot)&MediumSpace;to any people who subscribed to updates about a given website.
 
 The project consists of several notable parts:
 - the "frontend" is written in Python using the [python-telegram-bot&nbsp;{{< svg "static/link_modal.svg" >}}](https://github.com/python-telegram-bot/python-telegram-bot)&MediumSpace;library

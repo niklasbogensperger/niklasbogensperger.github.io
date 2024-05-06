@@ -13,8 +13,8 @@ draft: false
 ---
 
 
-My static website, made with Hugo, which you are currently enjoying. See the footer for more acknowledgements. The three valid domains for this site are:
+My static website, made with Hugo, which you are currently enjoying. See the footer for more acknowledgements. The three valid domains for this site are (all redirecting to the same domain):
 
-- [bogensperger.me&nbsp;{{< svg "static/link_modal.svg" >}}](https://bogensperger.me/)
-- [niklasbogensperger.com&nbsp;{{< svg "static/link_modal.svg" >}}](https://niklasbogensperger.com/)
-- [niklasbogensperger.github.io&nbsp;{{< svg "static/link_modal.svg" >}}](https://niklasbogensperger.github.io/)
+- [bogensperger.me&nbsp;{{< svg "static/link_modal_alt.svg" >}}](https://www.bogensperger.me/)
+- [niklasbogensperger.com&nbsp;{{< svg "static/link_modal_alt.svg" >}}](https://www.niklasbogensperger.com/)
+- [niklasbogensperger.github.io&nbsp;{{< svg "static/link_modal_alt.svg" >}}](https://niklasbogensperger.github.io/)
