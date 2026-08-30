@@ -46,6 +46,10 @@ workplace:
   id: fas building
   title: workplace
 
+orgunit:
+  id: fas sitemap
+  title: orgunit
+
 tasks:
   id: fas lightbulb
   title: tasks
