@@ -2,7 +2,7 @@
 title: "Work"
 subtitle: ""
 weight: 2
-date: "2025-08-30T12:00:00+02:00"
+date: "2026-08-30T20:00:00+02:00"
 image: "gallery/02_work.png"
 alt: "Work"
 draft: false
@@ -22,7 +22,7 @@ This solution looks ugly here in markdown, but simply making each line after the
 
 {{< icon "mapspin" >}}&nbsp;&nbsp;&nbsp;&nbsp;Bern, Switzerland
 
-{{< icon "tasks" >}}&nbsp;&nbsp;&nbsp;&nbsp;Continuing with projects from the preceding internship (digitalization, (sensible) use of AI); in addition expanding to projects related to data analysis/processing, standardization, and knowledge management; contributing to division-wide data management project
+{{< icon "tasks" >}}&nbsp;&nbsp;&nbsp;&nbsp;Continuing with projects from the preceding position (digitalization, utilization of AI); in addition expanding to projects related to data analysis/processing, standardization, and knowledge management; contributing to division-wide data management project
 
 {{< icon "date" >}}&nbsp;&nbsp;&nbsp;&nbsp;Since Q4 2025
 {{< rawhtml >}}</div>{{< /rawhtml >}}
@@ -36,7 +36,7 @@ This solution looks ugly here in markdown, but simply making each line after the
 
 {{< icon "mapspin" >}}&nbsp;&nbsp;&nbsp;&nbsp;Bern, Switzerland
 
-{{< icon "tasks" >}}&nbsp;&nbsp;&nbsp;&nbsp;Working on projects related to digitalization and (sensible) use of AI
+{{< icon "tasks" >}}&nbsp;&nbsp;&nbsp;&nbsp;Working on projects related to digitalization and utilization of AI in the department
 
 {{< icon "date" >}}&nbsp;&nbsp;&nbsp;&nbsp;Q2 & Q3 2025
 {{< rawhtml >}}</div>{{< /rawhtml >}}
